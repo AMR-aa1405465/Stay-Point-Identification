@@ -165,8 +165,8 @@ def SP_search(data,tc):
 
 #通过代表的距离是否小于距离阈值来大致判断停留点是否一致
 def similar(sp,dc):
-    latitude=copy.deepcopy(list(sp['Latitude']))
-    longitude=copy.deepcopy(list(sp['Longitude']))
+    latitude=copy.deepcopy(list(sp['latitude']))
+    longitude=copy.deepcopy(list(sp['longitude']))
     i=0;index=list(sp.index)
     for i in index:
         for j in index:
@@ -216,7 +216,7 @@ output=similar(output,dc)
 sil=silhouetteCoefficient(output,data)
 output['silhouetteCoefficient']=sil
 
-#output.to_csv('E:/output_avgcoor.csv')    
+output.to_csv('output_avgcoor.csv')    
     
 
      
